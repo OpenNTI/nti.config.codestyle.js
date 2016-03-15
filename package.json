@@ -1,0 +1,20 @@
+{
+  "name": "eslint-config-nti-codestyle-js",
+  "version": "1.0.0",
+  "description": "NextThought code style standard",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://repos.nextthought.com/git/nti.config.codestyle.js"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "codestyle"
+  ],
+  "author": "nextthought",
+  "license": "UNLICENCED",
+  "publishConfig": {
+    "registry": "https://npm.nextthought.com"
+  }
+}
