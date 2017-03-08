@@ -55,6 +55,6 @@ module.exports = {
 		"import/no-duplicates": 1,
 		"import/no-extraneous-dependencies": [2, {"devDependencies": false}],
 		"import/no-unresolved": [2, {"commonjs": true}],
-		"import/order": [1, {"newlines-between": "always"}]
+		"import/order": [1, {"newlines-between": "always", "groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}]
 	}
 };
