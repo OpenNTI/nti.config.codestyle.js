@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "eslint": "^3.0.0",
-    "eslint-loader": "^1.0.0"
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-import": "^2.2.0"
   }
 }

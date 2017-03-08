@@ -17,6 +17,10 @@ module.exports = {
 		"jasmine": true,
 		"es6": true
 	},
+	
+	"plugins": [
+		"import"
+	],
 
 	"rules": {
 		"camelcase": [2, {"properties": "always"}],
@@ -46,6 +50,11 @@ module.exports = {
 		"space-unary-ops": [1, { "words": true, "nonwords": false }],
 		"strict": [2, "never"],
 		"wrap-iife": [2, "outside"],
-		"valid-jsdoc": 1
+		"valid-jsdoc": 1,
+		
+		"import/no-duplicates": 1,
+		"import/no-extraneous-dependencies": [2, {"devDependencies": false}],
+		"import/no-unresolved": [2, {"commonjs": true}],
+		"import/order": [1, {"newlines-between": "always"}]
 	}
 };
