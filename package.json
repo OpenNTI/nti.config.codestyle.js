@@ -22,7 +22,7 @@
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
-    "eslint": "^4.0.0",
+    "eslint": "^3.0.0",
     "eslint-loader": "^1.0.0",
     "eslint-plugin-import": "^2.2.0"
   }
