@@ -55,7 +55,6 @@ module.exports = {
 		"import/no-duplicates": 1,
 		"import/no-extraneous-dependencies": [2, {"devDependencies": ["**/test/*.js", "**/*.spec.js"]}],
 		"import/no-unresolved": [2, {"commonjs": true}],
-		"import/newline-after-import": [1, { "count": 2 }],
 		"import/order": [1, {"newlines-between": "always", "groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
 		'import/first': 'error',
 		'import/no-amd': 'error',
