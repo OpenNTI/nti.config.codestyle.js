@@ -34,7 +34,7 @@ module.exports = {
 		"no-caller": 2,
 		"no-console": 2,
 		"no-extend-native": 2,
-		"no-multiple-empty-lines": [1, {"max": 3, "maxBOF": 0, "maxEOF": 1}],
+		"no-multiple-empty-lines": [1, {"max": 3, "maxBOF": 3, "maxEOF": 1}],
 		"no-new": 2,
 		"no-shadow": [1, {"builtinGlobals": false, "hoist": "never"}],
 		"no-throw-literal": 2,
@@ -55,6 +55,11 @@ module.exports = {
 		"import/no-duplicates": 1,
 		"import/no-extraneous-dependencies": [2, {"devDependencies": ["**/test/*.js", "**/*.spec.js"]}],
 		"import/no-unresolved": [2, {"commonjs": true}],
-		"import/order": [1, {"newlines-between": "always", "groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}]
+		"import/newline-after-import": [{ "count": 2 }],
+		"import/order": [1, {"newlines-between": "always", "groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
+		'import/first': 'error',
+		'import/no-amd': 'error',
+		'import/no-commonjs': 'error',
+		'import/no-webpack-loader-syntax': 'error'
 	}
 };
