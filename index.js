@@ -1,5 +1,5 @@
 
-const DEV = process.env.NODE_ENV !== 'production';
+const DEV = process.env.NODE_ENV !== 'production' || 'ATOM_HOME' in process.env;
 
 module.exports = {
 	extends: 'eslint:recommended',
