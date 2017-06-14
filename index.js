@@ -38,6 +38,7 @@ module.exports = {
 		'no-new': 'error',
 		'no-shadow': ['warn', {'builtinGlobals': false, 'hoist': 'never', 'allow': ['done']}],
 		'no-throw-literal': 'error',
+		'no-unused-vars': DEV ? 'warn' : 'error',
 		'no-use-before-define': ['error', 'nofunc'],
 		'no-var': 'error',
 		'quotes': ['warn', 'single'],
@@ -55,7 +56,6 @@ module.exports = {
 		'import/no-extraneous-dependencies': ['error', {'devDependencies': ['**/test/*.js', '**/*.spec.js']}],
 		'import/no-unresolved': ['error', {'commonjs': true}],
 		'import/order': ['warn', {'newlines-between': 'always', 'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']}],
-		'import/first': 'error',
 		'import/no-amd': 'error',
 		'import/no-commonjs': 'error',
 		'import/no-webpack-loader-syntax': 'error'
