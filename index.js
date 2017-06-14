@@ -27,7 +27,7 @@ module.exports = {
 
 	rules: {
 		'camelcase': ['error', {'properties': 'always'}],
-		'curly': ['error', 'multi', 'consistent'],
+		'curly': ['error', 'all'],
 		'eqeqeq': ['error', 'allow-null'],
 		'guard-for-in': 'error',
 		'indent': ['error', 'tab'],
