@@ -83,13 +83,8 @@ module.exports = {
 	env: {
 		es6: true,
 		node: true,
-		browser: true,
-		jest: true
+		browser: true
 	},
-	
-	globals: {
-		spyOn: true //jasmine interface exposed by jest
-	}
 	
 	plugins: [
 		'import'
