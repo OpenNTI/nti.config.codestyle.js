@@ -1,6 +1,72 @@
 
 const DEV = process.env.NODE_ENV !== 'production' || 'ATOM_HOME' in process.env;
 
+// The ESLint browser environment defines all browser globals as valid,
+// even though most people don't know some of them exist (e.g. `name` or `status`).
+// This is dangerous as it hides accidentally undefined variables.
+// We blacklist the globals that we deem potentially confusing.
+// To use them, explicitly reference them, e.g. `window.name` or `window.status`.
+var restrictedGlobals = [
+	'addEventListener',
+	'blur',
+	'close',
+	'closed',
+	'confirm',
+	'defaultStatus',
+	'defaultstatus',
+	'event',
+	'external',
+	'find',
+	'focus',
+	'frameElement',
+	'frames',
+	'history',
+	'innerHeight',
+	'innerWidth',
+	'length',
+	'location',
+	'locationbar',
+	'menubar',
+	'moveBy',
+	'moveTo',
+	'name',
+	'onblur',
+	'onerror',
+	'onfocus',
+	'onload',
+	'onresize',
+	'onunload',
+	'open',
+	'opener',
+	'opera',
+	'outerHeight',
+	'outerWidth',
+	'pageXOffset',
+	'pageYOffset',
+	'parent',
+	'print',
+	'removeEventListener',
+	'resizeBy',
+	'resizeTo',
+	'screen',
+	'screenLeft',
+	'screenTop',
+	'screenX',
+	'screenY',
+	'scroll',
+	'scrollbars',
+	'scrollBy',
+	'scrollTo',
+	'scrollX',
+	'scrollY',
+	'self',
+	'status',
+	'statusbar',
+	'stop',
+	'toolbar',
+	'top',
+];
+
 module.exports = {
 	extends: 'eslint:recommended',
 
@@ -21,6 +87,10 @@ module.exports = {
 		jest: true
 	},
 	
+	globals: {
+		spyOn: true //jasmine interface exposed by jest
+	}
+	
 	plugins: [
 		'import'
 	],
@@ -36,6 +106,7 @@ module.exports = {
 		'no-debugger': DEV ? 'warn' : 'error',
 		'no-multiple-empty-lines': ['warn', {'max': 3, 'maxBOF': 3, 'maxEOF': 1}],
 		'no-new': 'error',
+		'no-restricted-globals': ['error'].concat(restrictedGlobals),
 		'no-shadow': ['warn', {'builtinGlobals': false, 'hoist': 'never', 'allow': ['done']}],
 		'no-throw-literal': 'error',
 		'no-unused-vars': DEV ? 'warn' : 'error',
