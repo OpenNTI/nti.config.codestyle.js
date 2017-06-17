@@ -104,7 +104,7 @@ module.exports = {
 		'no-restricted-globals': ['error'].concat(restrictedGlobals),
 		'no-shadow': ['warn', {'builtinGlobals': false, 'hoist': 'never', 'allow': ['done']}],
 		'no-throw-literal': 'error',
-		'no-unused-vars': DEV ? 'warn' : 'error',
+		'no-unused-vars': [DEV ? 'warn' : 'error', {"args": "none"}],
 		'no-use-before-define': ['error', 'nofunc'],
 		'no-var': 'error',
 		'quotes': ['warn', 'single'],
