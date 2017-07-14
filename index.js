@@ -65,6 +65,13 @@ var restrictedGlobals = [
 	'stop',
 	'toolbar',
 	'top',
+	
+	//block deprecated jasmine globals
+	'it',
+	'xit',
+	'fit',
+	'fdescribe',
+	'xdescribe',
 ];
 
 module.exports = {
